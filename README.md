@@ -42,3 +42,39 @@ Proyek ini disusun untuk memenuhi Evaluasi Tengah Semester (ETS) mata kuliah **S
 ├── 3d_map_result.png   # Hasil render grafik 3D point cloud & trajektori drone
 ├── main.pdf            # Laporan akhir ter-compile (PDF)
 └── README.md           # Dokumentasi repositori
+🚀 Cara Menjalankan Proyek
+1. Persyaratan Sistem & Instalasi Pustaka
+Pastikan Python 3.10+ dan CoppeliaSim V4.x sudah terinstal di komputer Anda. Buka terminal atau PowerShell, lalu jalankan perintah berikut:
+
+Bash
+pip install numpy matplotlib coppeliasim-zmqremoteapi-client
+2. Langkah Eksekusi Kode & Simulasi
+Buka Scene CoppeliaSim:
+
+Jalankan aplikasi CoppeliaSim.
+
+Pilih menu File -> Open scene..., lalu muat file 3DMapping.ttt.
+
+Jalankan Simulasi:
+
+Tekan tombol Play (ikon segitiga biru) di toolbar atas CoppeliaSim untuk mengaktifkan mesin simulasi.
+
+Eksekusi Script Python:
+
+Buka Terminal / PowerShell di dalam folder proyek ini.
+
+Jalankan perintah:
+
+Bash
+python 3Dmapping.py
+Kendalikan Drone:
+
+Jendela pop-up Drone Controller akan muncul.
+
+Gunakan kombinasi tombol W, A, S, D, I, dan K untuk mengarahkan drone mengelilingi rintangan di area simulasi.
+
+Render & Simpan Peta 3D:
+
+Tekan tombol merah "Stop & Plot 3D Map" pada GUI.
+
+Program akan otomatis menghentikan penerbangan, memproses voxel grid filter, menyimpan gambar 3d_map_result.png, dan menampilkan window grafik 3D interaktif.
