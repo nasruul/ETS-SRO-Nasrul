@@ -11,9 +11,9 @@ Proyek ini disusun untuk memenuhi Evaluasi Tengah Semester (ETS) mata kuliah **S
 * **Penyusun:** Nasrul (NRP. 5022241067)
 * **Dosen Pengampu:** Muhammad Qomaruz Zaman, S.T., M.T., Ph.D.
 * **Instansi:** Departemen Teknik Elektro, FTEIC - Institut Teknologi Sepuluh Nopember
-* **Repositori GitHub:** [https://github.com/nasruul/ETS-SRO-Nasrul.git](https://github.com/nasruul/ETS-SRO-Nasrul.git)
-* **Demo Proses (YouTube):** [https://youtu.be/beXEb19Ait4](https://youtu.be/beXEb19Ait4)
-* **Demo Hasil 3D (YouTube):** [https://youtu.be/66v9deKGp1Y](https://youtu.be/66v9deKGp1Y)
+* **Repositori GitHub:** https://github.com/nasruul/ETS-SRO-Nasrul.git
+* **Demo Proses (YouTube):** https://youtu.be/beXEb19Ait4
+* **Demo Hasil 3D (YouTube):** https://youtu.be/66v9deKGp1Y
 
 ---
 
@@ -46,14 +46,17 @@ Proyek ini disusun untuk memenuhi Evaluasi Tengah Semester (ETS) mata kuliah **S
 
 ## 📁 Struktur Berkas
 
-```text
 .
 ├── 3Dmapping.py        # Skrip utama Python (GUI Controller, ZMQ API, Transformasi & Plot 3D)
 ├── 3DMapping.ttt       # File scene simulasi CoppeliaSim
+├── quadcopter.lua      # Script Lua ekstrak untuk kontrol quadcopter
+├── sensor_fast3d.lua   # Script Lua ekstrak untuk penangkap/pemancar buffer sensor 3D
+├── controller.png      # Screenshot antarmuka GUI Drone Controller
 ├── 3d_map_result.png   # Hasil render grafik 3D point cloud & trajektori drone
-├── Laporan_ETS_SRO_Nasrul_5022241067            # Laporan akhir ter-compile (PDF)
+├── main.pdf            # Laporan akhir ter-compile (PDF)
 └── README.md           # Dokumentasi repositori
-```
+
+---
 
 ## 🚀 Cara Menjalankan Proyek
 
@@ -77,3 +80,9 @@ Pastikan **Python 3.10+** dan **CoppeliaSim V4.x** sudah terinstal di komputer A
 5. **Render & Simpan Peta 3D:**
    * Tekan tombol merah **"Stop & Plot 3D Map"** pada GUI.
    * Program akan otomatis menghentikan penerbangan, memproses *voxel grid filter*, menyimpan gambar `3d_map_result.png`, dan menampilkan window grafik 3D interaktif.
+
+> **💡 Catatan Penanganan Error Script Lua:**
+> Jika terjadi error pada script bawaan CoppeliaSim (misalnya sensor tidak mengirimkan data `fast3D_data` atau drone tidak merespon):
+> 1. Double-click ikon script Lua pada objek `Quadcopter` atau `fast3D` di panel *Scene Hierarchy* CoppeliaSim.
+> 2. Salin seluruh isi dari file `quadcopter.lua` (untuk drone) atau `sensor_fast3d.lua` (untuk sensor) yang ada di repositori ini.
+> 3. *Paste* kode tersebut ke dalam editor script CoppeliaSim untuk menggantikan kode lama, lalu simpan (*Save & Close*).
