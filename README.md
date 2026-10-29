@@ -50,7 +50,6 @@ Proyek ini disusun untuk memenuhi Evaluasi Tengah Semester (ETS) mata kuliah **S
 .
 ├── 3Dmapping.py        # Skrip utama Python (GUI Controller, ZMQ API, Transformasi & Plot 3D)
 ├── 3DMapping.ttt       # File scene simulasi CoppeliaSim
-├── controller.png      # Screenshot antarmuka GUI Drone Controller
 ├── 3d_map_result.png   # Hasil render grafik 3D point cloud & trajektori drone
 ├── main.pdf            # Laporan akhir ter-compile (PDF)
 └── README.md           # Dokumentasi repositori
